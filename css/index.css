@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.hidden {
+    display: none;
+}
+
 .conteudo__titulo {
   color: white;
   text-align: center;
