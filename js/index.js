@@ -2,9 +2,11 @@
 let votoSim = window.document.getElementById('sim');
 let votoNao = window.document.getElementById('nao');
 
-let parceiro = prompt('Seu nome?');
-document.querySelector('.conteudo__titulo').innerHTML += parceiro + ' ?';
-
+let parceiro = prompt('Digite seu nome.');
+if (parceiro) {
+    document.querySelector('.conteudo__titulo').classList.remove('hidden');
+    document.querySelector('.conteudo__titulo').innerHTML += parceiro + ' ?';
+}
 const alertas = () => {
   alert(`💞 Nunca desconfiei que escolheria qualquer outra opção ${parceiro}, agora clique em OK 🥰`);
   location.href = "https://youtu.be/nfezTxgrcUo";
