@@ -13,9 +13,11 @@ const alertas = () => {
 };
 
 const zoeira = () => {
-  votoNao.style.position = 'absolute';
-  votoNao.style.top = (Math.random() * window.innerHeight) + 'px';
-  votoNao.style.left = (Math.random() * window.innerWidth) + 'px';
+    const rect = votoNao.getBoundingClientRect(); // Obter as dimensões do botão
+
+    votoNao.style.position = 'absolute';
+    votoNao.style.top = Math.random() * (window.innerHeight - rect.height) + 'px'; // Subtrai a altura do botão
+    votoNao.style.left = Math.random() * (window.innerWidth - rect.width) + 'px'; // Subtrai a largura do botão
 };
 
 votoSim.addEventListener('click', alertas);
